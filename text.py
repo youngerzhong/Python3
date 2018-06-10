@@ -3,4 +3,3 @@
 #younger
 print('welcome to python3')
 print('welcome to pycharm')
-print('text')
