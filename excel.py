@@ -8,3 +8,4 @@ print(mysheet.name, mysheet.nrows, mysheet.ncols)
 rows = mysheet.row_values(5) #行
 cols = mysheet.col_values(2) #列
 print(rows, cols)
+1
