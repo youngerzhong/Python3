@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 from xlutils.copy import copy
 import xlrd, xlwt
-workbook = xlrd.open_workbook('1.xlsx', formatting_info=True) #打开excel文件
+workbook = xlrd.open_workbook('1.xlsx') #打开excel文件
 print(workbook.sheet_names()) #打印出获取到的全部表
 mysheet = workbook.sheet_by_name('Sheet1')  #跟据工作簿的名字获取sheet内容
 # print(mysheet.name, mysheet.nrows, mysheet.ncols)
