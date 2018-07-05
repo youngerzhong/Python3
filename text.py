@@ -56,5 +56,24 @@ import  time
 # import test3    #一般用这个 后面要加函数和变量名字
 # print(test3.say("mrzangh"))
 
-import test3
-print(test3.change_name('aaaaa'))
+# import test3
+# print(test3.change_name('aaaaa'))
+import re
+# str5 = 'dflsjdf qerewr'
+# print(re.match('\w{3}([a-s])\w*\s+\w{2}([a-z])', str5).groups())
+str1 = 'Port-channel1.189          192.168.189.254  YES     GONFIG   UP'
+str2 = '166    54a2.74f7.0326    DYNAMIC     Gi1/0/11'
+a = re.match('([\w]*.{1,13})\s*(\d{3}.\d{3}.\d{3}.\d{3})\s*\w*\s*\w*\s*(.*)', str1).groups()
+b = re.match('(\d*)\s*(\w*.\w*.\d*)\s*(\w*)\s*(.*)', str2).groups()
+length = len(str1)
+print('-' * length)
+print('{0:7}:{1:>18}'.format('接口', a[0]))
+print('{0:7}:{1:>16}'.format('IP地址', a[1]))
+print('{0:7}:{1:>3}'.format('状态', a[2]))
+
+length1 = len(str2)
+print('-' * length1)
+print('{0:10}:{1:>4}'.format('VLAN ID',b[0]))
+print('{0:10}:{1:>15}'.format('MAC ADD',b[1]))
+print('{0:10}:{1:>8}'.format('Type',b[2]))
+print('{0:10}:{1:>9}'.format('Type',b[3]))
