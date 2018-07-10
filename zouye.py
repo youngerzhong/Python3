@@ -28,8 +28,28 @@
 # print(Line1)
 # print(Line2)
 # print('=' * length1)
-import re
-cmd_str = 'Port-channel1.189   YES CONFIG up'
-a=re.match('(^\w+.)', cmd_str).groups()
-print(len(cmd_str))
-print(a)
+
+# import copy
+# l1 = [4, 5, 7, 1, 3, 9, 0]
+# l2 = l1
+# # l2 = l1.copy()
+# l2.sort()
+# for i in range(len(l1)):
+#     print(l1[i], l2[i])
+
+import os, re
+ifconfig_result = os.popen('ifconfig ens33').read()
+# print(ifconfig_result)
+re_findall_result = re.findall('(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})', ifconfig_result)
+# print(re_findall_result)
+for ip in re_findall_result:
+    # print(ip)
+    print(re.findall('\d{1,3}\.\d{1,3}\.\d{1,3}\.(\d{1,3})', ip))
+    if re.findall('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}',ip) == '0':
+        mask = ip
+    elif re.findall('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}',ip) == '255':
+        broadcast = ip
+    else:
+        ipv4_ip = ip
+a = '{0}\n{1}\n{2}'.format('Networn')
+# a = 'fsdf.fsfsd.dfasdf '
