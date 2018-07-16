@@ -83,3 +83,14 @@ import re
 # for c in shuru:
 #     res.append(c * 4)
 # print(res)
+
+a = '不会重复打印:\n'
+b = '''a\nb'''
+
+for i in b:
+    a = a + i
+print(a)
+# print('='*80)
+# d = '重复打印：\n'
+# for i in b:
+#     print(d, i)
