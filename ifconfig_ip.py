@@ -70,20 +70,11 @@ utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
 # print(mac_ifconfig_result)
 
 #匹配IP地址
-ip_ifconfig_result = re.findall('\d+\.\d+\.\d+\.\d+', ifconfig_result)
-print(ip_ifconfig_result)
+# ip_ifconfig_result = re.findall('\d+\.\d+\.\d+\.\d+', ifconfig_result)
+# print(ip_ifconfig_result)
 
 #匹配接口
 interface_ifocnig_result = re.split('\n', ifconfig_result)
-# print(interface_ifocnig_result)
-print((str(interface_ifocnig_result)))
-# print(type(ifconfig_result))
-# print(type(interface_ifocnig_result))
-for inter in  interface_ifocnig_result:
-    a = re.match('^\w+\:', inter) #正则匹配出数据
-    # print(a)   #打印出来，发现有多余的没用的数据(None)
-    if str(a) == 'None':   #正则之后数据类型是list不能和字符串(None)匹配对比，所以先把a转换为字符串
-        pass  #匹配出没用的数据什么都不做
-    else:
-        # print(a.group())  #把有用的数据打印出来
-        print(a.group())
+print(interface_ifocnig_result)
+for i in  interface_ifocnig_result[1]:
+    print(i)

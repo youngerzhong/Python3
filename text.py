@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
-import  time
+import  time, os
 # age = input('How old are you today?')
 # age10 = int(age) + 10
 # print('in 10 years you will be '.capitalize() + str(age10) + ' years old.')
@@ -84,13 +84,13 @@ import re
 #     res.append(c * 4)
 # print(res)
 
-a = '不会重复打印:\n'
-b = '''a\nb'''
 
-for i in b:
-    a = a + i
-print(a)
-# print('='*80)
-# d = '重复打印：\n'
-# for i in b:
-#     print(d, i)
+import  time
+while True:
+    try:
+        time.sleep(2)
+        print('请输入ctrl + c来停止循环')
+    except KeyboardInterrupt:
+        print('接收到管理员ctrl + c')
+        print('退出')
+        break

@@ -34,4 +34,8 @@ for i in all_file_list:    #遍历整个目录
                 #第一次用，才知道原来keyword 赋值 keyword 加变量i时，原始的keyword会不重复打印，只有变量i才会变
                 keyword = keyword + '{0:>13}'.format(i) + '\n'
                 # result_file_conn.append(i)
-print(keyword)
+# print(keyword)
+all_list = os.listdir()
+print(all_list)
+print(len(all_list))
+
