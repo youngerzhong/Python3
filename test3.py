@@ -28,10 +28,7 @@
 #     else:
 #         print('Incorrect password.')
 #     print('All done!')
-
-import re
-def is_done2(s):
-    return re.match('done|quit',s)!=None
-
-
-print(is_done2('aaa'))
+import scapy_ping_one_new
+a = input('请输入ip地址:')
+print(scapy_ping_one_new.scapy_ping_one(a))
+import paramiko
