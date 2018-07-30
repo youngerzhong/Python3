@@ -9,7 +9,7 @@ try:
         # print(split_netstat_result)
         for i in split_netstat_result:   #遍历正则数据
             i = i.split()[3]             #提取数据
-            # print(i)
+            print(i)
             i = re.match('.*\:(\d+)$', i).group(1)  #再次正则匹配数据
             # print(i)
             if i == number:   #判断

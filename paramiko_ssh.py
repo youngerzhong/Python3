@@ -14,5 +14,14 @@ def QYT_SSHClient_SingleCMD(ip, command, port=22, user='root', password='root'):
         print('%tErrorn %s'%(ip, e))
 
 if __name__ == '__main__':
-    a = QYT_SSHClient_SingleCMD(ip='192.168.1.105', command='interface print', user='admin', password='dggj12345')
-    print(a)
+    text = QYT_SSHClient_SingleCMD(ip='192.168.125.135', command='ls')
+    print(text)
+#     ip = input('请输入ip地址:')
+#     user = input('请输入用户名：')
+#     password = input('请输入密码：')
+# while True:
+#     command = input('请输入命令：')
+#     print('如果要退出命令，请输入"exit()"')
+#     if command == 'exit()':break
+#     test = QYT_SSHClient_SingleCMD(ip=ip, command=command, user=user, password=password)
+#     print(test)
